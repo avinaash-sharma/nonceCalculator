@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aviro.noncecalculator.MainActivity"
+    android:id="@+id/relativeLayout">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hash Value"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:id="@+id/hashLabel"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputHash"
+        android:layout_below="@+id/hashLabel"
+        android:gravity="center"
+        android:text="0000933fa60cdab9f59e208e2916b46f"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Input Your Value"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:id="@+id/LabelValue"
+        android:layout_below="@+id/inputHash"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Your value"
+        android:layout_below="@+id/LabelValue"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:id="@+id/inputValue"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/inputValue"
+        android:text="Input your Nonce Value"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:id="@+id/labelNonce"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Your Nonce Value"
+        android:layout_below="@+id/labelNonce"
+        android:id="@+id/inputNonce"
+        android:gravity="center" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your OutPut Here"
+        android:id="@+id/output"
+        android:textStyle="italic"
+        android:textSize="20dp"
+        android:layout_below="@+id/inputNonce"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/mine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/output"
+        android:layout_marginTop="21dp"
+        android:layout_toEndOf="@+id/progressBar"
+        android:onClick="mine"
+        android:text="Mine" />
+
+    <Button
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mine"
+        android:layout_alignBottom="@+id/mine"
+        android:layout_toStartOf="@+id/progressBar"
+        android:onClick="check"
+        android:text="check" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputValue"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+
+
+</RelativeLayout>
